@@ -1,1 +1,6 @@
+# Specific to the project
 sessions/
+
+
+# Specific to development environment
+.vscode/

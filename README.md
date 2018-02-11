@@ -1,6 +1,8 @@
 # TrainStats Embedded probe
+
 This project contains the software to make a hardware probe for _TrainStats_. This software was mainly created for _SBC_ cards like _Raspberry Pi_, _Orange Pi_, _Odroid_, _Nano Pi_ etc... but you can use it with your computer or any other platform with _Serial port_.
 
+Soon, a web interface will be available to view your exports with an interactive map. It will be the subject of another repo.
 
 _Disclamer:_ This project is not a [_people|vehicle|pet|what you want_] tracking system. This project is a train tracker for **analysis purposes** (speed in a section, average stop time). 
 
@@ -27,10 +29,29 @@ git clone https://github.com/themimitoof/trainstats-embedded trainstats
 cd trainstats
 ```
 
+Install _python dependancies_ with ```pip```:
+```bash
+pip install -r requirements.txt
+```
 
-## Usage
-...
+Now to can start the probe on typing the command:
+```bash
+./trainstats.py -d /dev/ttyUSB0
+```
+
+_Note:_ replace ```/dev/ttyUSB0``` with the good serial port.
+
+And voilà! The probe is collecting GPS data and write them into a file on the ```sessions``` folder's.
+
+You can check all startup commands by typing:
+```bash
+./trainstats.py -h
+```
 
 
 ## Tweaking the raspberry Pi
-...
+_This part available soon!_
+
+
+## Contribution
+You can contribute to this project on creating an issue or on making a merge request.
